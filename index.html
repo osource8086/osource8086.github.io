@@ -1,9 +1,8 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">-->
     <title>OSOURCE</title>
     <script src="jquery-1.11.2.js"></script>
     <style type="text/css">
@@ -23,6 +22,7 @@
         table, td, tr, th {
             font-size: 12px;
         }
+
         /* 链接颜色 */
         a:link {
             color: #1f3a87;
@@ -42,6 +42,7 @@
         a:active {
             color: #bc2931;
         }
+
         /* 颜色属性 [定义规则，小写c加颜色名称] */
         .cRed, a.cRed:link, a.cRed:visited {
             color: Red;
@@ -82,6 +83,7 @@
         .cGreen, a.cGreen:link, a.cGreen:visited {
             color: #008000;
         }
+
         /* 字体属性 [定义规则，小写f加属性名称] */
         .fB {
             font-weight: bold;
@@ -90,6 +92,7 @@
         .fI {
             font-style: italic;
         }
+
         /* 字体大小*/
         .f12px {
             font-size: 12px;
@@ -98,6 +101,7 @@
         .f14px {
             font-size: 14px;
         }
+
         /* 其他属性 */
         .left {
             float: left;
@@ -130,17 +134,17 @@
         .area {
             margin: 0 auto;
             width: 100%;
-			/* 高度 */
+            /* 高度 */
             height: 450px;
         }
 
-            .area .col1 {
-                float: left;
-                width: 100%;
-                height: 100%;
-                border: 1px #e0e0e0 solid;
-                /*height: auto;*/
-            }
+        .area .col1 {
+            float: left;
+            width: 100%;
+            height: 100%;
+            border: 1px #e0e0e0 solid;
+            /*height: auto;*/
+        }
 
         .blankW6 {
             height: 6px;
@@ -157,29 +161,29 @@
             border-bottom: 1px #e0e0e0 solid;
         }
 
-            .adMenu ul {
-            }
+        .adMenu ul {
+        }
 
-            .adMenu li {
-                float: left;
-                list-style-type: none;
-                line-height: 26px;
-                width: 120px;
-                border-right: 1px #e0e0e0 solid;
-                cursor: pointer;
-                text-align: center;
-            }
+        .adMenu li {
+            float: left;
+            list-style-type: none;
+            line-height: 26px;
+            width: 120px;
+            border-right: 1px #e0e0e0 solid;
+            cursor: pointer;
+            text-align: center;
+        }
 
-                .adMenu li.active {
-                    float: left;
-                    background-color: #FFFFFF;
-                    border-bottom: 1px #ffffff solid;
-                    font-weight: bold;
-                    border-top: 2px solid #3164aa;
-                }
+        .adMenu li.active {
+            float: left;
+            background-color: #FFFFFF;
+            border-bottom: 1px #ffffff solid;
+            font-weight: bold;
+            border-top: 2px solid #3164aa;
+        }
 
-                .adMenu li.normal {
-                }
+        .adMenu li.normal {
+        }
 
         .bd {
             border: 1px #ace solid;
@@ -195,8 +199,8 @@
             font-size: 14px;
         }
 
-        .fontSearch{
-            font-size:14px;
+        .fontSearch {
+            font-size: 14px;
             font-weight: bold;
         }
 
@@ -212,20 +216,22 @@
         }
 
         .baiduSearch {
-            cursor: pointer;color: white;
+            cursor: pointer;
+            color: white;
             background-color: #4e6ef2;
             border: none;
             font-size: 17px;
             font-weight: 400;
-            background-image: -webkit-linear-gradient(top,#4e6ef2,#4e6ef2);
+            background-image: -webkit-linear-gradient(top, #4e6ef2, #4e6ef2);
         }
+
         .googleSearch {
             cursor: pointer;
             color: #5F6368;
             background-color: #f2f2f2;
             border: 1px solid #f2f2f2;
-            font-family: arial,sans-serif;
-            background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+            font-family: arial, sans-serif;
+            background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
         }
 
         input:-webkit-autofill {
@@ -235,854 +241,896 @@
     </style>
 </head>
 <body>
-    <script>
+<script>
 
-        // !function(n) {
-        //     var e = n.document,
-        //         t = e.documentElement,
-        //         i = 640,
-        //         d = i / 100,
-        //         o = "orientationchange" in n ? "orientationchange": "resize",
-        //         a = function() {
-        //             var n = t.clientWidth || 320;
-        //             n > 640 && (n = 640),
-        //                 t.style.fontSize = n / d + "px"
-        //         };
-        //     e.addEventListener && (n.addEventListener(o, a, !1), e.addEventListener("DOMContentLoaded", a, !1))
-        // } (window);
+    // !function(n) {
+    //     var e = n.document,
+    //         t = e.documentElement,
+    //         i = 640,
+    //         d = i / 100,
+    //         o = "orientationchange" in n ? "orientationchange": "resize",
+    //         a = function() {
+    //             var n = t.clientWidth || 320;
+    //             n > 640 && (n = 640),
+    //                 t.style.fontSize = n / d + "px"
+    //         };
+    //     e.addEventListener && (n.addEventListener(o, a, !1), e.addEventListener("DOMContentLoaded", a, !1))
+    // } (window);
 
-        function getNames(obj, name, tij) {
-            var p = document.getElementById(obj);
-            var plist = p.getElementsByTagName(tij);
-            var rlist = new Array();
-            for (i = 0; i < plist.length; i++) {
-                if (plist[i].getAttribute("name") == name) {
-                    rlist[rlist.length] = plist[i];
-                }
-            }
-            return rlist;
-        }
-        function fod(obj, name) {
-            var p = obj.parentNode.getElementsByTagName("li");
-            var p1 = getNames(name, "f", "div"); // document.getElementById(name).getElementsByTagName("div");
-            for (i = 0; i < p1.length; i++) {
-                if (obj == p[i]) {
-                    p[i].className = "active";
-                    p1[i].className = "dis";
-                }
-                else {
-                    p[i].className = "normal";
-                    p1[i].className = "hidden";
-                }
+    function getNames(obj, name, tij) {
+        var p = document.getElementById(obj);
+        var plist = p.getElementsByTagName(tij);
+        var rlist = new Array();
+        for (i = 0; i < plist.length; i++) {
+            if (plist[i].getAttribute("name") == name) {
+                rlist[rlist.length] = plist[i];
             }
         }
+        return rlist;
+    }
 
-        $(document).ready(function () {
-            $("#input_search").attr("name", "word");
-            // $("#input_hidden").attr("name","");
-            $("#form_main").attr("action", "http://www.baidu.com/baidu");
+    function fod(obj, name) {
+        var p = obj.parentNode.getElementsByTagName("li");
+        var p1 = getNames(name, "f", "div"); // document.getElementById(name).getElementsByTagName("div");
+        for (i = 0; i < p1.length; i++) {
+            if (obj == p[i]) {
+                p[i].className = "active";
+                p1[i].className = "dis";
+            } else {
+                p[i].className = "normal";
+                p1[i].className = "hidden";
+            }
+        }
+    }
+
+    $(document).ready(function () {
+        $("#input_search").attr("name", "word");
+        // $("#input_hidden").attr("name","");
+        $("#form_main").attr("action", "http://www.baidu.com/baidu");
+    });
+
+
+    /**
+     * 判断搜索框是否为空
+     */
+    function searchValIsNull() {
+        if ($("#input_search").val() == "" || $("#input_search").val().length == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $(function () {
+
+        //旧方法
+        // $("#google").click(function () {
+        //     $("#input_search").attr("name", "q");
+        //     $("#form_main").attr("action", "http://www.google.com/search");
+        // });
+
+        // $("#baidu").click(function () {
+        //     $("#input_search").attr("name", "word");
+        //     $("#form_main").attr("action", "http://www.baidu.com/baidu");
+        // });
+
+        $("#google").click(function () {
+            $("#input_search").attr("name", "q");
+            $("#form_main").attr("action", "https://www.google.com/search");
         });
 
-
-        $(function () {
-
-            //旧方法
-            // $("#google").click(function () {
-            //     $("#input_search").attr("name", "q");
-            //     $("#form_main").attr("action", "http://www.google.com/search");
-            // });
-
-            // $("#baidu").click(function () {
-            //     $("#input_search").attr("name", "word");
-            //     $("#form_main").attr("action", "http://www.baidu.com/baidu");
-            // });
-
-            $("#google").click(function () {
-                $("#input_search").attr("name", "q");
-                $("#form_main").attr("action", "https://www.google.com/search");
-            });
-
-            $("#baidu").click(function () {
-                $("#input_search").attr("name", "wd");
-                $("#input_encode").attr("name", "ie");
-                $("#input_encode").attr("value", "utf-8");
-                $("#form_main").attr("action", "https://www.baidu.com/s");
-            });
-
-			$("#magi").click(function () {
-                $("#input_search").attr("name", "q");
-                $("#form_main").attr("action", "https://magi.com/search");
-				$("#form_main").submit();
-            });
-
-			$("#douban").click(function () {
-                $("#input_search").attr("name", "q");
-                $("#form_main").attr("action", "https://www.douban.com/search");
-                $("#form_main").submit();
-            });
-
-			$("#zhihu").click(function () {
-                $("#input_search").attr("name", "q");
-                $("#form_main").attr("action", "https://www.zhihu.com/search");
-                $("#form_main").submit();
-            });
-
-            $("#tb").click(function () {
-                $("#input_search").attr("name", "q");
-                $("#input_encode").attr("name", "ie");
-                $("#input_encode").attr("value", "utf8");
-                $("#input_hidden").attr("name", "commend");
-                $("#input_hidden").attr("value", "all");
-                $("#form_main").attr("action", "https://s.taobao.com/search");
-                $("#form_main").submit();
-            });
-
-            $("#jd").click(function () {
-                $("#input_search").attr("name", "keyword");
-                $("#input_encode").attr("name", "enc");
-                $("#input_encode").attr("value", "utf-8");
-                $("#form_main").attr("action", "https://search.jd.com/Search");
-                $("#form_main").submit();
-            });
-
-            $("#bili").click(function () {
-                $("#input_search").attr("name", "keyword");
-                $("#form_main").attr("action", "https://search.bilibili.com/all");
-                $("#form_main").submit();
-            });
-
-            $("#iqiyi").click(function () {
-                $("#input_search").attr("name", "");
-                $("#form_main").attr("action", "https://so.iqiyi.com/so/q_" + $("#input_search").val());
-                $("#form_main").submit();
-            });
-
-            $("#youku").click(function () {
-                $("#input_search").attr("name", "");
-                $("#form_main").attr("action", "https://so.youku.com/search_video/q_" + $("#input_search").val());
-                $("#form_main").submit();
-            });
-
+        $("#baidu").click(function () {
+            $("#input_search").attr("name", "wd");
+            $("#input_encode").attr("name", "ie");
+            $("#input_encode").attr("value", "utf-8");
+            $("#form_main").attr("action", "https://www.baidu.com/s");
         });
 
-		$(function(){
-            var version = "22.1.1";
-            $("#ver").text("OSOURCE Version " + version);
-			$("#ver").click(function(){
-				alert("网页仅供私人使用，未经开发者本人同意，严禁传播。\n网页版权归osource所有。");
-			});
-		});
+        $("#magi").click(function () {
+            $("#input_search").attr("name", "q");
+            $("#form_main").attr("action", "https://magi.com/search");
+            if (searchValIsNull) {
+                $("#form_main").attr("action", "https://magi.com");
+            }
+            $("#form_main").submit();
+        });
 
-    </script>
-    <table width="100%">
+        $("#douban").click(function () {
+            $("#input_search").attr("name", "q");
+            $("#form_main").attr("action", "https://www.douban.com/search");
+            if (searchValIsNull()) {
+                $("#form_main").attr("action", "https://www.douban.com");
+            }
+            $("#form_main").submit();
+        });
 
-		<tr>
-			<td align="center" valign="middle" style="padding-top:20px;">
-				<div style="width:439px;height:68px;background-image:url(logov2.1.png);">
-				</div>
-			</td>
-		</tr>
-        <tr>
-            <td align="center" valign="middle" style="padding-bottom:30px;padding-top:20px;">
-                <form method=get id="form_main" style="height: 50px;">
-                    <table bgcolor="#FFFFFF">
-                        <tr>
-                            <td height="45px" valign="middle">
-                                <input id="input_search" type=text size=30 maxlength=255 value="" class="inputSearch"  />
-                                <input id="input_encode" type="hidden" name="" value="" />
-                                <input id="input_hidden" type="hidden" name="" value="" />
-                            </td>
-                            <td height="45px" valign="middle">
-                                <input id="baidu" type="submit" value="百度一下" class="baiduSearch" style="height:40px;width:102px;" />
-                            </td>
-                            <td height="45px" valign="middle">
-                                <input id="google" type=submit value="Google 搜索" class="googleSearch" style="height:40px;width:102px;" />
-                            </td>
-                        </tr>
-						<tr>
-							<td colspan="3">
-								<a id="magi" class="fontSearch" style="cursor:pointer;color:#14181C">Mag[i]</a>
-                                &nbsp;&nbsp;
-								<a id="douban" class="fontSearch" style="cursor:pointer;color:#228A31">豆瓣</a>
-                                &nbsp;&nbsp;
-								<a id="zhihu" class="fontSearch" style="cursor:pointer;color:#0084FF">知乎</a>
-                                &nbsp;&nbsp;
-                                <a id="tb" class="fontSearch" style="cursor:pointer;color:#FF4400">淘宝</a>
-                                &nbsp;&nbsp;
-                                <a id="jd" class="fontSearch" style="cursor:pointer;color:#DF0000">京东</a>
-                                &nbsp;&nbsp;
-                                <a id="bili" class="fontSearch" style="cursor:pointer;color:#FB7299">bilibili</a>
-                                &nbsp;&nbsp;
-                                <a id="iqiyi" class="fontSearch" style="cursor:pointer;color:#00BE06">爱奇艺</a>
-                                &nbsp;&nbsp;
-                                <a id="youku" class="fontSearch" style="cursor:pointer;color:#24A5FF">优酷</a>
-                                &nbsp;&nbsp;
+        $("#zhihu").click(function () {
+            $("#input_search").attr("name", "q");
+            $("#form_main").attr("action", "https://www.zhihu.com/search");
+            if (searchValIsNull()) {
+                $("#form_main").attr("action", "https://www.zhihu.com");
+            }
+            $("#form_main").submit();
+        });
 
-							</td>
-						</tr>
-                    </table>
-                </form>
+        $("#tb").click(function () {
+            $("#input_search").attr("name", "q");
+            $("#input_encode").attr("name", "ie");
+            $("#input_encode").attr("value", "utf8");
+            $("#input_hidden").attr("name", "commend");
+            $("#input_hidden").attr("value", "all");
+            $("#form_main").attr("action", "https://s.taobao.com/search");
+            if (searchValIsNull()) {
+                $("#form_main").attr("action", "https://taobao.com");
+            }
+            $("#form_main").submit();
+        });
 
-            </td>
-        </tr>
-    </table>
+        $("#jd").click(function () {
+            $("#input_search").attr("name", "keyword");
+            $("#input_encode").attr("name", "enc");
+            $("#input_encode").attr("value", "utf-8");
+            $("#form_main").attr("action", "https://search.jd.com/Search");
+            if (searchValIsNull()) {
+                $("#form_main").attr("action", "https://jd.com");
+            }
+            $("#form_main").submit();
+        });
 
-    <div class="area">
-        <div class="col1">
-            <div class="adMenu">
-                <ul>
-                    <li class="active" onmouseover="fod(this,'fodc1')">LINUX</li>
-                    <li class="normal" onmouseover="fod(this,'fodc1')">WORK</li>
-                    <li class="normal" onmouseover="fod(this,'fodc1')">MOVIE</li>
-                    <li class="normal" onmouseover="fod(this,'fodc1')">TOOLS</li>
-                    <li class="normal" onmouseover="fod(this,'fodc1')">OTHER</li>
-                    <li class="normal" onmouseover="fod(this,'fodc1')" style="display:none;">USED</li>
-                </ul>
+        $("#bili").click(function () {
+            $("#input_search").attr("name", "keyword");
+            $("#form_main").attr("action", "https://search.bilibili.com/all");
+            if (searchValIsNull()) {
+                $("#form_main").attr("action", "https://bilibili.com");
+            }
+            $("#form_main").submit();
+        });
+
+        $("#iqiyi").click(function () {
+            $("#input_search").attr("name", "");
+            $("#form_main").attr("action", "https://so.iqiyi.com/so/q_" + $("#input_search").val());
+            if (searchValIsNull()) {
+                $("#form_main").attr("action", "https://iqiyi.com");
+            }
+            $("#form_main").submit();
+        });
+
+        $("#youku").click(function () {
+            $("#input_search").attr("name", "");
+            $("#form_main").attr("action", "https://so.youku.com/search_video/q_" + $("#input_search").val());
+            if(searchValIsNull()){
+                $("#form_main").attr("action", "https://youku.com");
+            }
+            $("#form_main").submit();
+        });
+
+    });
+
+    $(function () {
+        var version = "22.1.2";
+        $("#ver").text("OSOURCE Version " + version);
+        $("#ver").click(function () {
+            alert("网页仅供私人使用，未经开发者本人同意，严禁传播。\n网页版权归osource所有。");
+        });
+    });
+
+</script>
+<table width="100%">
+
+    <tr>
+        <td align="center" valign="middle" style="padding-top:20px;">
+            <div style="width:439px;height:68px;background-image:url(logov2.1.png);">
             </div>
-            <div id="fodc1" style="font-family:'Microsoft YaHei';">
-                <div class="dis" name="f">
-                    <!--LINUX-->
-                    <br />&nbsp;
-                    <table width="100%">
-                        <tr>
-                            <td width="4%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td valign="top" class="fontSS">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" valign="middle" style="padding-bottom:30px;padding-top:20px;">
+            <form method=get id="form_main" style="height: 50px;">
+                <table bgcolor="#FFFFFF">
+                    <tr>
+                        <td height="45px" valign="middle">
+                            <input id="input_search" type=text size=30 maxlength=255 value="" class="inputSearch"/>
+                            <input id="input_encode" type="hidden" name="" value=""/>
+                            <input id="input_hidden" type="hidden" name="" value=""/>
+                        </td>
+                        <td height="45px" valign="middle">
+                            <input id="baidu" type="submit" value="百度一下" class="baiduSearch"
+                                   style="height:40px;width:102px;"/>
+                        </td>
+                        <td height="45px" valign="middle">
+                            <input id="google" type=submit value="Google 搜索" class="googleSearch"
+                                   style="height:40px;width:102px;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <a id="magi" class="fontSearch" style="cursor:pointer;color:#14181C">Mag[i]</a>
+                            &nbsp;&nbsp;
+                            <a id="douban" class="fontSearch" style="cursor:pointer;color:#228A31">豆瓣</a>
+                            &nbsp;&nbsp;
+                            <a id="zhihu" class="fontSearch" style="cursor:pointer;color:#0084FF">知乎</a>
+                            &nbsp;&nbsp;
+                            <a id="tb" class="fontSearch" style="cursor:pointer;color:#FF4400">淘宝</a>
+                            &nbsp;&nbsp;
+                            <a id="jd" class="fontSearch" style="cursor:pointer;color:#DF0000">京东</a>
+                            &nbsp;&nbsp;
+                            <a id="bili" class="fontSearch" style="cursor:pointer;color:#FB7299">bilibili</a>
+                            &nbsp;&nbsp;
+                            <a id="iqiyi" class="fontSearch" style="cursor:pointer;color:#00BE06">爱奇艺</a>
+                            &nbsp;&nbsp;
+                            <a id="youku" class="fontSearch" style="cursor:pointer;color:#24A5FF">优酷</a>
+                            &nbsp;&nbsp;
+
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+        </td>
+    </tr>
+</table>
+
+<div class="area">
+    <div class="col1">
+        <div class="adMenu">
+            <ul>
+                <li class="active" onmouseover="fod(this,'fodc1')">LINUX</li>
+                <li class="normal" onmouseover="fod(this,'fodc1')">WORK</li>
+                <li class="normal" onmouseover="fod(this,'fodc1')">MOVIE</li>
+                <li class="normal" onmouseover="fod(this,'fodc1')">TOOLS</li>
+                <li class="normal" onmouseover="fod(this,'fodc1')">OTHER</li>
+                <li class="normal" onmouseover="fod(this,'fodc1')" style="display:none;">USED</li>
+            </ul>
+        </div>
+        <div id="fodc1" style="font-family:'Microsoft YaHei';">
+            <div class="dis" name="f">
+                <!--LINUX-->
+                <br/>&nbsp;
+                <table width="100%">
+                    <tr>
+                        <td width="4%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td valign="top" class="fontSS">
 
 
-                                <a href="https://www.kernel.org">The Linux Kernel Archives</a>
-                                <br />
-                                <a href="http://www.centos.org/">CentOS</a>
-                                <br />
-                                <a href="http://www.ubuntu.org.cn/index_kylin">ubuntu</a>
-								&nbsp;
-								<a href="https://cn.ubuntu.com/"><span style="font-size:12px;">中国</span></a>
-                                <br />
-                                <a href="http://www.debian.org/">Debian</a>
-                                <br />
-								<a href="https://www.archlinux.org/">Arch</a>
-								<br />
-                                <a href="https://www.manjaro.org/">Manjaro</a>
-                                <br />
-                                <a href="http://www.linuxmint.com/">Linux Mint</a>
-                                <br />
-                                <a href="https://system76.com/pop">Pop!_OS</a>
-                                <br />
-                                <a href="https://www.deepin.org/">deepin</a>
-                                <br />
-                                <a href="https://getfedora.org/">Fedora</a>
-                                <br />
-                                <a href="https://www.opensuse.org/">openSUSE</a>
-                                <br />
-								<a href="https://www.kali.org/">Kali</a>
-								<br />
-                                <a href="https://www.freebsd.org/">FreeBSD</a>
-                                <br />
-                                <a href="http://www.redhat.com/zh/global/china">Red Hat</a>
-                                <br />
-								<a href="https://distrowatch.com/dwres.php?resource=popularity">DistroWatch</a>
-								<br />
+                            <a href="https://www.kernel.org">The Linux Kernel Archives</a>
+                            <br/>
+                            <a href="http://www.centos.org/">CentOS</a>
+                            <br/>
+                            <a href="http://www.ubuntu.org.cn/index_kylin">ubuntu</a>
+                            &nbsp;
+                            <a href="https://cn.ubuntu.com/"><span style="font-size:12px;">中国</span></a>
+                            <br/>
+                            <a href="http://www.debian.org/">Debian</a>
+                            <br/>
+                            <a href="https://www.archlinux.org/">Arch</a>
+                            <br/>
+                            <a href="https://www.manjaro.org/">Manjaro</a>
+                            <br/>
+                            <a href="http://www.linuxmint.com/">Linux Mint</a>
+                            <br/>
+                            <a href="https://system76.com/pop">Pop!_OS</a>
+                            <br/>
+                            <a href="https://www.deepin.org/">deepin</a>
+                            <br/>
+                            <a href="https://getfedora.org/">Fedora</a>
+                            <br/>
+                            <a href="https://www.opensuse.org/">openSUSE</a>
+                            <br/>
+                            <a href="https://www.kali.org/">Kali</a>
+                            <br/>
+                            <a href="https://www.freebsd.org/">FreeBSD</a>
+                            <br/>
+                            <a href="http://www.redhat.com/zh/global/china">Red Hat</a>
+                            <br/>
+                            <a href="https://distrowatch.com/dwres.php?resource=popularity">DistroWatch</a>
+                            <br/>
 
 
-                            </td>
-                            <td valign="top" class="fontSS">
-                                <a href="http://www.gnu.org/">GNU</a>
-                                <br />
-                                <a href="http://www.linux.org">Linux</a>
-                                <br />
-                                <a href="http://www.pathname.com/fhs/">File system Hierarchy Standard (FHS)</a>
-                                <br />
-                                <a href="http://www.linuxbase.org/">Linux Standard Base (LSB)</a>
-                                <br />
-                                <a href="http://mirrors.aliyun.com/">Ali-OSM</a>
-                                <br />
-                                <a href="http://www.study-area.org">Study-Area</a>
-                                <br />
-                                <a href="http://www.tldp.org">The Linux Documentation Project</a>
-                                <br />
-								<a href="http://www.tuxera.com/community/open-source-ntfs-3g/">TUXERA (Open Source:NTFS-3G)</a>
-								<br />
-                                <a href="https://filezilla-project.org/">FileZilla</a>
-                                <br />
-                                <a href="http://spferng.myweb.hinet.net/">SPFDisk</a>
-                                <br />
-                                <a href="http://linux.vbird.org">鸟哥</a>
-                                <br />
-								<a href="http://www.linuxprobe.com/">LinuxProbe</a>
-								<br />
-								<a href="http://www.linuxprobe.com/book/">linux就该这么学</a>
-								<br />
-                            </td>
-                            <td valign="top" class="fontSS">
-                                <a href="http://plan9.bell-labs.com/cm/cs/who/ken/index.html">Ken Thompson</a>
-                                <br />
-                                <a href="http://cm.bell-labs.com/cm/cs/who/dmr/">Dennis Ritchie</a>
-                                <br />
-                                <a href="http://www.stallman.org">Richard Stallman</a>
-                                <br />
-                            </td>
-                            <td valign="top" class="fontSS">
-							    <span style="color:#4B4C50;"><b>Mirrors</b></span>
-								<br />
-								<br />
-<!--								<a href="https://opsx.alibaba.com/">阿里巴巴开源镜像站</a>-->
-<!--								<br />-->
-								<a href="https://mirrors.huaweicloud.com/">华为开源镜像站</a>
-								<br />
-								<a href="http://mirrors.163.com/">网易开源镜像站</a>
-								<br />
-								<a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源镜像站</a>
-								<br />
-								<a href="http://mirrors.ustc.edu.cn/">USTC开源镜像站</a>
-								<br />
-								<a href="http://ruby.taobao.org/">淘宝RubyGems镜像</a>
-								<br />
-								<a href="http://npm.taobao.org/">淘宝npm镜像</a>
-								<br />
-							</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="hidden" name="f">
-                    <!--WORK-->
-                    <br />&nbsp;
-                    <table width="100%">
-                        <tr>
-                            <td width="4%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td valign="top" class="fontSS">
-<!--                                <a href="http://www.w3school.com.cn/index.html">W3School</a>-->
-<!--                                <br />-->
-                                <a href="http://www.runoob.com/">RUNOOB</a>
-                                <br />
-                                <a href="http://www.bjpowernode.com/tutorial/">动力节点</a>
-                                <br />
-                                <a href="https://how2j.cn/">HOW2J</a>
-                                <br />
-                                <a href="http://www.imooc.com/">慕课网</a>
-                                <br />
-                                <a href="http://www.ityouknow.com/">纯洁的微笑</a>
-                                <br />
-                                <a href="https://doc.ruoyi.vip/">若依文档</a>
-								<br />
-<!--                                <a href="http://www.java1234.com/easyui.html">EasyUI中文示例文档</a>-->
-								<a href="http://www.csdn.net/">CSDN</a>
-								<br />
-                                <a href="http://www.oschina.net">开源中国社区</a>
-                                <br />
-								<a href="http://www.jikexueyuan.com/">极客学院</a>
-								<br />
-                                <a href="https://developer.android.google.cn/guide">Android Developers</a>
-                                <br />
-                                <a href="http://msdn.microsoft.com/zh-cn">Microsoft Developer Network</a>
-                                <br />
-<!--                                <a href="https://www.shiyanlou.com/">实验楼</a>-->
-								<br />
-								<br />
-                                <a href="http://www.bejson.com">在线Json校验</a>
-                                <br />
-                                <a href="http://www.bejson.com/jsonviewernew/">在线Json视图</a>
-                                <br />
-								<a href="http://tool.oschina.net/">在线工具</a>
-								<br />
-                                <a href="http://web.chacuo.net/formatsql/">SQL格式化</a>
-                                <br />
-                                <a href="https://www.aconvert.com/cn/">ACONVERT</a>
-                                &nbsp;
-                                <a href="https://www.aconvert.com/cn/image/webp-to-png/"><span style="font-size:12px;">webp</span></a>
-                                <br />
-								<a href="http://www.iconfont.cn/">iconfont</a>
-								<br />
-                            </td>
-                            <td valign="top" class="fontSS">
-                                <a href="https://github.com/">GitHub</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="https://gitee.com/">Gitee</a>
-								<br />
-								<a href="https://stackoverflow.com/">Stack Overflow</a>
-								<br />
-                                <a href="https://www.tiobe.com/tiobe-index/">TIOBE</a>
-                                <br />
-								<br />
-								<a href="https://www.aliyun.com/">阿里云</a>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="https://www.huaweicloud.com/">华为云</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="https://aws.amazon.com/cn/">AWS</a>
-								<br />
-								<br />
-                                <a href="https://edu.aliyun.com/">阿里云大学</a>
-                                <br />
-                                <a href="https://developer.aliyun.com/">开发者社区</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="https://yq.aliyun.com/">云栖社区</a>
-								<br />
-								<a href="https://open.1688.com/">阿里巴巴开放平台</a>
-								<br />
-								<br />
-								<br />
-								<br />
-								<a href="https://im.dingtalk.com/">钉钉</a>
-								&nbsp;
-								<a href="https://mail.dingtalk.com/alimail/">钉邮</a>
-								<br />
-								<a href="https://www.yuque.com/">语雀</a>
-								&nbsp;
-								<a href="https://www.yuque.com/osource"><span style="font-size:12px;">个人主页</span></a>
-								<br />
-								<a href="https://mail.aliyun.com/">阿里邮箱</a>
-								&nbsp;
-								<a href="https://qiye.aliyun.com/alimail/"><span style="font-size:12px;">企业</span></a>
-								<br />
-								<br />
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://www.gnu.org/">GNU</a>
+                            <br/>
+                            <a href="http://www.linux.org">Linux</a>
+                            <br/>
+                            <a href="http://www.pathname.com/fhs/">File system Hierarchy Standard (FHS)</a>
+                            <br/>
+                            <a href="http://www.linuxbase.org/">Linux Standard Base (LSB)</a>
+                            <br/>
+                            <a href="http://mirrors.aliyun.com/">Ali-OSM</a>
+                            <br/>
+                            <a href="http://www.study-area.org">Study-Area</a>
+                            <br/>
+                            <a href="http://www.tldp.org">The Linux Documentation Project</a>
+                            <br/>
+                            <a href="http://www.tuxera.com/community/open-source-ntfs-3g/">TUXERA (Open
+                                Source:NTFS-3G)</a>
+                            <br/>
+                            <a href="https://filezilla-project.org/">FileZilla</a>
+                            <br/>
+                            <a href="http://spferng.myweb.hinet.net/">SPFDisk</a>
+                            <br/>
+                            <a href="http://linux.vbird.org">鸟哥</a>
+                            <br/>
+                            <a href="http://www.linuxprobe.com/">LinuxProbe</a>
+                            <br/>
+                            <a href="http://www.linuxprobe.com/book/">linux就该这么学</a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://plan9.bell-labs.com/cm/cs/who/ken/index.html">Ken Thompson</a>
+                            <br/>
+                            <a href="http://cm.bell-labs.com/cm/cs/who/dmr/">Dennis Ritchie</a>
+                            <br/>
+                            <a href="http://www.stallman.org">Richard Stallman</a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <span style="color:#4B4C50;"><b>Mirrors</b></span>
+                            <br/>
+                            <br/>
+                            <!--								<a href="https://opsx.alibaba.com/">阿里巴巴开源镜像站</a>-->
+                            <!--								<br />-->
+                            <a href="https://mirrors.huaweicloud.com/">华为开源镜像站</a>
+                            <br/>
+                            <a href="http://mirrors.163.com/">网易开源镜像站</a>
+                            <br/>
+                            <a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源镜像站</a>
+                            <br/>
+                            <a href="http://mirrors.ustc.edu.cn/">USTC开源镜像站</a>
+                            <br/>
+                            <a href="http://ruby.taobao.org/">淘宝RubyGems镜像</a>
+                            <br/>
+                            <a href="http://npm.taobao.org/">淘宝npm镜像</a>
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hidden" name="f">
+                <!--WORK-->
+                <br/>&nbsp;
+                <table width="100%">
+                    <tr>
+                        <td width="4%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td valign="top" class="fontSS">
+                            <!--                                <a href="http://www.w3school.com.cn/index.html">W3School</a>-->
+                            <!--                                <br />-->
+                            <a href="http://www.runoob.com/">RUNOOB</a>
+                            <br/>
+                            <a href="http://www.bjpowernode.com/tutorial/">动力节点</a>
+                            <br/>
+                            <a href="https://how2j.cn/">HOW2J</a>
+                            <br/>
+                            <a href="http://www.imooc.com/">慕课网</a>
+                            <br/>
+                            <a href="http://www.ityouknow.com/">纯洁的微笑</a>
+                            <br/>
+                            <a href="https://doc.ruoyi.vip/">若依文档</a>
+                            <br/>
+                            <!--                                <a href="http://www.java1234.com/easyui.html">EasyUI中文示例文档</a>-->
+                            <a href="http://www.csdn.net/">CSDN</a>
+                            <br/>
+                            <a href="http://www.oschina.net">开源中国社区</a>
+                            <br/>
+                            <a href="http://www.jikexueyuan.com/">极客学院</a>
+                            <br/>
+                            <a href="https://developer.android.google.cn/guide">Android Developers</a>
+                            <br/>
+                            <a href="http://msdn.microsoft.com/zh-cn">Microsoft Developer Network</a>
+                            <br/>
+                            <!--                                <a href="https://www.shiyanlou.com/">实验楼</a>-->
+                            <br/>
+                            <br/>
+                            <a href="http://www.bejson.com">在线Json校验</a>
+                            <br/>
+                            <a href="http://www.bejson.com/jsonviewernew/">在线Json视图</a>
+                            <br/>
+                            <a href="http://tool.oschina.net/">在线工具</a>
+                            <br/>
+                            <a href="http://web.chacuo.net/formatsql/">SQL格式化</a>
+                            <br/>
+                            <a href="https://www.aconvert.com/cn/">ACONVERT</a>
+                            &nbsp;
+                            <a href="https://www.aconvert.com/cn/image/webp-to-png/"><span
+                                    style="font-size:12px;">webp</span></a>
+                            <br/>
+                            <a href="http://www.iconfont.cn/">iconfont</a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="https://github.com/">GitHub</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://gitee.com/">Gitee</a>
+                            <br/>
+                            <a href="https://stackoverflow.com/">Stack Overflow</a>
+                            <br/>
+                            <a href="https://www.tiobe.com/tiobe-index/">TIOBE</a>
+                            <br/>
+                            <br/>
+                            <a href="https://www.aliyun.com/">阿里云</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://www.huaweicloud.com/">华为云</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://aws.amazon.com/cn/">AWS</a>
+                            <br/>
+                            <br/>
+                            <a href="https://edu.aliyun.com/">阿里云大学</a>
+                            <br/>
+                            <a href="https://developer.aliyun.com/">开发者社区</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://yq.aliyun.com/">云栖社区</a>
+                            <br/>
+                            <a href="https://open.1688.com/">阿里巴巴开放平台</a>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <a href="https://im.dingtalk.com/">钉钉</a>
+                            &nbsp;
+                            <a href="https://mail.dingtalk.com/alimail/">钉邮</a>
+                            <br/>
+                            <a href="https://www.yuque.com/">语雀</a>
+                            &nbsp;
+                            <a href="https://www.yuque.com/osource"><span style="font-size:12px;">个人主页</span></a>
+                            <br/>
+                            <a href="https://mail.aliyun.com/">阿里邮箱</a>
+                            &nbsp;
+                            <a href="https://qiye.aliyun.com/alimail/"><span style="font-size:12px;">企业</span></a>
+                            <br/>
+                            <br/>
 
-                            </td>
-                            <td valign="top" class="fontSS">
-<!--                                <a href="http://echarts.baidu.com/index.html">ECharts</a>-->
-                                <a href="https://echarts.apache.org/zh/index.html">ECharts</a>
-                                <br />
-								<a href="http://lbsyun.baidu.com/">百度地图开放平台</a>
-								<br />
-								<a href="http://developer.baidu.com/">百度开发者中心</a>
-								<br />
-								<a href="http://index.baidu.com/v2/index.html#/">百度指数</a>
-								<br />
-								<a href="http://tongji.baidu.com/data/">百度统计&nbsp;<span style="font-size:12px;">流量研究院</span></a>
-								<br />
-								<a href="http://tushuo.baidu.com/">百度图说</a>
-								<br />
-								<a href="https://sugar.baidu.com/">百度Suger</a>
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-                                <br />
-                                <a href="https://repo.spring.io/release/org/springframework/spring/">Spring Framework</a>
-                                <br />
-                                <a href="https://start.spring.io/">SpringInitializr</a>
-                                <br />
-                                <a href="https://www.oracle.com/cn/java/technologies/java-se-api-doc.html">API</a>
-                                &nbsp;&nbsp;
-                                <a href="https://docs.oracle.com/javase/8/docs/api/">Java SE 8</a>
-                                &nbsp;&nbsp;
-                                <a href="https://javaee.github.io/javaee-spec/javadocs/">Java EE 8</a>
-                                <br />
-                                <a href="https://mvnrepository.com/">MVNrepository</a>
-                                &nbsp;&nbsp;
-                                <a href="https://maven.aliyun.com/mvn/search">AliRepo</a>
-                                <br />
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <!--                                <a href="http://echarts.baidu.com/index.html">ECharts</a>-->
+                            <a href="https://echarts.apache.org/zh/index.html">ECharts</a>
+                            <br/>
+                            <a href="http://lbsyun.baidu.com/">百度地图开放平台</a>
+                            <br/>
+                            <a href="http://developer.baidu.com/">百度开发者中心</a>
+                            <br/>
+                            <a href="http://index.baidu.com/v2/index.html#/">百度指数</a>
+                            <br/>
+                            <a href="http://tongji.baidu.com/data/">百度统计&nbsp;<span style="font-size:12px;">流量研究院</span></a>
+                            <br/>
+                            <a href="http://tushuo.baidu.com/">百度图说</a>
+                            <br/>
+                            <a href="https://sugar.baidu.com/">百度Suger</a>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <a href="https://repo.spring.io/release/org/springframework/spring/">Spring Framework</a>
+                            <br/>
+                            <a href="https://start.spring.io/">SpringInitializr</a>
+                            <br/>
+                            <a href="https://www.oracle.com/cn/java/technologies/java-se-api-doc.html">API</a>
+                            &nbsp;&nbsp;
+                            <a href="https://docs.oracle.com/javase/8/docs/api/">Java SE 8</a>
+                            &nbsp;&nbsp;
+                            <a href="https://javaee.github.io/javaee-spec/javadocs/">Java EE 8</a>
+                            <br/>
+                            <a href="https://mvnrepository.com/">MVNrepository</a>
+                            &nbsp;&nbsp;
+                            <a href="https://maven.aliyun.com/mvn/search">AliRepo</a>
+                            <br/>
 
 
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="https://mp.weixin.qq.com/">微信公众平台</a>
+                            <br/>
+                            <a href="https://developers.weixin.qq.com/doc/">微信官方文档</a>
+                            <br/>
+                            <a href="http://open.qq.com/">腾讯开放平台</a>
+                            <br/>
+                            <a href="http://idesign.qq.com/">腾讯设计导航</a>
+                            <br/>
+                            <a href="https://zhitu.isux.us/">腾讯智图</a>
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hidden" name="f">
+                <!--MOVIE-->
+                <br/>&nbsp;
+                <table width="100%">
+                    <tr>
+                        <td width="4%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td valign="top" class="fontSS">
 
-							</td>
-                            <td valign="top" class="fontSS">
-								<a href="https://mp.weixin.qq.com/">微信公众平台</a>
-								<br />
-								<a href="https://developers.weixin.qq.com/doc/">微信官方文档</a>
-								<br />
-								<a href="http://open.qq.com/">腾讯开放平台</a>
-								<br />
-								<a href="http://idesign.qq.com/">腾讯设计导航</a>
-								<br />
-								<a href="https://zhitu.isux.us/">腾讯智图</a>
-								<br />
-							</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="hidden" name="f">
-                    <!--MOVIE-->
-                    <br />&nbsp;
-                    <table width="100%">
-                        <tr>
-                            <td width="4%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td valign="top" class="fontSS">
+                            <!--							    <a href="http://www.mp4ba.cc/" target="_black" rel="noopener noreferrer">MP4吧</a>-->
+                            <!--								<br />-->
+                            <a href="https://www.dytt8.net/index2.htm" rel="noopener noreferrer"
+                               target="_blank">电影天堂</a>
+                            &nbsp;
+                            <a href="https://www.ygdy8.com/index.html"><span style="font-size:12px;">备用</span></a>
+                            <br/>
+                            <a href="https://www.dy2018.com/" target="_black" rel="noopener noreferrer">电影2018</a>
+                            <br/>
+                            <a href="https://gaoqing.fm/" target="_black" rel="noopener noreferrer">高清电台</a>
+                            <br/>
+                            <a href="http://gaoqing.la/" target="_blank" rel="noopener noreferrer">中国高清网</a>
+                            <br/>
+                            <a href="https://www.jsr9.com/" target="_blank" rel="noopener noreferrer">BT天堂</a>
+                            <br/>
+                            <a href="https://www.xl720.com/" target="_blank" rel="noopener noreferrer">迅雷电影</a>
+                            <br/>
+                            <!--                                <a href="http://www.xiepp.com/" target="_blank" rel="noopener noreferrer">下片片</a>-->
+                            <!--                                <br />-->
+                            <a href="http://www.loldytt2088.com/" rel="noopener noreferrer" target="_blank">LOL电影</a>
+                            <br/>
+                            <a href="http://www.hao6v.tv/" rel="noopener noreferrer" target="_blank">6v电影网</a>
+                            <br/>
+                            <a href="http://www.poxiaotv.com/" rel="noopener noreferrer" target="_blank">破晓电影</a>
+                            <br/>
+                            <a href="http://www.xunleidytt.com/" rel="noopener noreferrer" target="_blank">迅雷电影天堂</a>
+                            <br/>
+                            <!--								<a href="https://www.btba.cc/" target="_blank" rel="noopener noreferrer">BT吧</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.bttt.la/" target="_blank" rel="noopener noreferrer">BT天堂</a>-->
+                            <!--								<a href="http://www.22tu.cc/" target="_blank" rel="noopener noreferrer">迅播影院</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.rarbt.com/" target="_blank" rel="noopener noreferrer">RARBT中文站</a>-->
+                            <!--								<br />-->
+                            <!--                                <a href="http://www.kaixindy.com/" target="_blank" rel="noopener noreferrer">海阔天空</a>-->
+                            <!--                                <br />-->
+                            <!--                                <a href="http://www.gaoqingkong.com/" target="_blank" rel="noopener noreferrer">高清控联盟</a>-->
+                            <!--                                <br />-->
+                            <!--                                <a href="http://blu-raydisc.tv/" target="_blank" rel="noopener noreferrer">蓝光电影</a>-->
+                            <!--                                <br />-->
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="https://www.meijutt.tv/" target="_blank">美剧天堂</a>
+                            <br/>
+                            <!--								<a href="http://www.bt606.com/forum.php" target="_blank">BT乐园</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.lbldy.com/" target="_blank">龙部落</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.mxroom.com/" target="_blank">百度云资源论坛</a>-->
+                            <!--								<br />-->
+                            <a href="http://www.dygang.com/" target="_blank">电影港</a>
+                            <br/>
+                            <!--								<a href="http://www.2011mv.com/" target="_blank">夕阳小站</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://2kandy.com/" target="_blank">爱看电影网</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.1080pdy.com/" target="_blank">1080P电影网</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.iplaykan.com/" target="_black">我看看</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.piaohua.tv/" target="_black">飘花电影</a>-->
+                            <!--								<br />-->
+                            <a href="http://www.ygdy8.com" target="_blank">阳光电影</a>
+                            <br/>
+                            <a href="https://www.4kvm.com/" target="_blank">4k影视</a>
+                            <br/>
+                            <!--								<a href="http://www.mp4pa.com/" target="_blank">MP4pa</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.mp4ba.net/" target="_blank">高清MP4</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.99tvs.com/" target="_blank">高清MP4吧</a>-->
+                            <!--								<br />-->
 
-<!--							    <a href="http://www.mp4ba.cc/" target="_black" rel="noopener noreferrer">MP4吧</a>-->
-<!--								<br />-->
-                                <a href="https://www.dytt8.net/index2.htm" rel="noopener noreferrer" target="_blank">电影天堂</a>
-                                &nbsp;
-                                <a href="https://www.ygdy8.com/index.html"><span style="font-size:12px;">备用</span></a>
-                                <br />
-								<a href="https://www.dy2018.com/" target="_black" rel="noopener noreferrer">电影2018</a>
-								<br />
-								<a href="https://gaoqing.fm/" target="_black" rel="noopener noreferrer">高清电台</a>
-								<br />
-                                <a href="http://gaoqing.la/" target="_blank" rel="noopener noreferrer">中国高清网</a>
-                                <br />
-                                <a href="https://www.jsr9.com/" target="_blank" rel="noopener noreferrer">BT天堂</a>
-                                <br />
-                                <a href="https://www.xl720.com/" target="_blank" rel="noopener noreferrer">迅雷电影</a>
-                                <br />
-<!--                                <a href="http://www.xiepp.com/" target="_blank" rel="noopener noreferrer">下片片</a>-->
-<!--                                <br />-->
-								<a href="http://www.loldytt2088.com/" rel="noopener noreferrer" target="_blank">LOL电影</a>
-								<br />
-								<a href="http://www.hao6v.tv/" rel="noopener noreferrer" target="_blank">6v电影网</a>
-								<br />
-								<a href="http://www.poxiaotv.com/" rel="noopener noreferrer" target="_blank">破晓电影</a>
-								<br />
-								<a href="http://www.xunleidytt.com/" rel="noopener noreferrer" target="_blank">迅雷电影天堂</a>
-								<br />
-<!--								<a href="https://www.btba.cc/" target="_blank" rel="noopener noreferrer">BT吧</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.bttt.la/" target="_blank" rel="noopener noreferrer">BT天堂</a>-->
-<!--								<a href="http://www.22tu.cc/" target="_blank" rel="noopener noreferrer">迅播影院</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.rarbt.com/" target="_blank" rel="noopener noreferrer">RARBT中文站</a>-->
-<!--								<br />-->
-<!--                                <a href="http://www.kaixindy.com/" target="_blank" rel="noopener noreferrer">海阔天空</a>-->
-<!--                                <br />-->
-<!--                                <a href="http://www.gaoqingkong.com/" target="_blank" rel="noopener noreferrer">高清控联盟</a>-->
-<!--                                <br />-->
-<!--                                <a href="http://blu-raydisc.tv/" target="_blank" rel="noopener noreferrer">蓝光电影</a>-->
-<!--                                <br />-->
-                            </td>
-                            <td valign="top" class="fontSS">
-								<a href="https://www.meijutt.tv/" target="_blank">美剧天堂</a>
-								<br />
-<!--								<a href="http://www.bt606.com/forum.php" target="_blank">BT乐园</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.lbldy.com/" target="_blank">龙部落</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.mxroom.com/" target="_blank">百度云资源论坛</a>-->
-<!--								<br />-->
-								<a href="http://www.dygang.com/" target="_blank">电影港</a>
-								<br />
-<!--								<a href="http://www.2011mv.com/" target="_blank">夕阳小站</a>-->
-<!--								<br />-->
-<!--								<a href="http://2kandy.com/" target="_blank">爱看电影网</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.1080pdy.com/" target="_blank">1080P电影网</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.iplaykan.com/" target="_black">我看看</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.piaohua.tv/" target="_black">飘花电影</a>-->
-<!--								<br />-->
-                                <a href="http://www.ygdy8.com" target="_blank">阳光电影</a>
-                                <br />
-                                <a href="https://www.4kvm.com/" target="_blank">4k影视</a>
-                                <br />
-<!--								<a href="http://www.mp4pa.com/" target="_blank">MP4pa</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.mp4ba.net/" target="_blank">高清MP4</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.99tvs.com/" target="_blank">高清MP4吧</a>-->
-<!--								<br />-->
-
-							</td>
-                            <td valign="top" class="fontSS">
-                                <a href="http://www.bilibili.com/">bilibili</a>
-                                <br />
-                                <a href="http://www.iqiyi.com/">爱奇艺</a>
-                                <br />
-								<a href="http://www.youku.com/">优酷</a>
-								<br />
-								<a href="https://v.qq.com/">腾讯视频</a>
-								<br />
-								<a href="http://www.acfun.cn/">AcFun</a>
-								<br />
-								<a href="http://maoyan.com/">猫眼</a>
-								<br />
-								<a href="http://tv.sohu.com/">搜狐视频</a>
-								<br />
-								<a href="http://www.le.com/">乐视</a>
-                                <br />
-								<a href="http://www.1905.com/">1905</a>
-								<br />
-							</td>
-                            <td valign="top" class="fontSS">
-								<a href="http://www.zimuku.net/" target="_blank">字幕库</a>
-								<br />
-                                <a href="https://subhd.tv/" target="_blank">Sub HD 字幕站</a>
-                                <br />
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="hidden" name="f">
-                    <!--TOOLS-->
-                    <br />&nbsp;
-                    <table width="100%">
-                        <tr>
-                            <td width="4%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td valign="top" class="fontSS">
-                                <a href="http://note.youdao.com/">有道云笔记</a>
-                                <br />
-								<a href="https://docs.qq.com/desktop/?tdsourcetag=s_browser_shortcut">腾讯文档</a>
-								<br />
-								<a href="https://naotu.baidu.com/home">百度脑图</a>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="https://pan.baidu.com/">百度网盘</a>
-								<br />
-                                <a href="https://gitmind.cn/">GitMind</a>
-                                <br />
-								<a href="https://www.edrawmax.cn/online/">亿图图示</a>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="https://mm.edrawsoft.cn/files">mindmaster</a>
-								<br />
-								<a href="http://music.163.com/">网易云音乐</a>
-								&nbsp;
-                                <a href="http://email.163.com/">网易邮箱</a>
-                                <br />
-                                <a href="https://www.sui.com/report_index.do">随手记</a>
-                                <br />
-                                <!--a href="http://www.firearmsworld.net">枪炮世界</a-->
-								<a href="http://pewpewpew.work/">枪炮世界</a>
-                                <br />
-								<a href="http://msdn.itellyou.cn/">I Tell You</a>
-                                &nbsp;
-                                <a href="https://next.itellyou.cn/"><span style="font-size:12px;">新版</span></a>
-								<br />
-								<a href="http://www.zdfans.com/">软件</a>
-								<br />
-								<a href="https://www.dida365.com/">滴答清单</a>
-								<br />
-								<a href="http://pan.stnts.com/">盛天云盘</a>
-								<br />
-                            </td>
-                            <td valign="top" class="fontSS">
-								<a href="http://fanyi.youdao.com/">有道翻译</a>
-								&nbsp;
-								<a href="http://dict.youdao.com/"><span style="font-size:12px;">词典</span></a>
-								<br />
-                                <a href="http://fanyi.baidu.com/">百度翻译</a>
-                                <br />
-                                <a href="http://map.baidu.com/">百度地图</a>
-                                <br />
-                                <!--a href="http://ditu.google.cn/maps?hl=zh-CN&tab=wl">Google地图</a-->
-                                <a href="https://www.google.com/maps">Google地图</a>
-                                <br />
-                                <a href="http://wx.qq.com">微信网页版</a>
-                                <br />
-                                <a href="http://www.converticon.com/">PNG To ICON</a>
-                                <br />
-                                <a href="http://www.iconarchive.com/">icon</a>
-                                <br />
-                                <a href="http://www.flvcd.com/">硕鼠</a>
-                                <br />
-                                <a href="http://61.185.242.108/uhtbin/webcat">陕西省图检索</a>
-                                <br />
-                            </td>
-                            <td valign="top" class="fontSS">
-								<a href="http://www.intel.cn/">intel</a>
-								<br />
-								<a href="http://www.nvidia.cn/">NVIDIA</a>
-								<br />
-								<a href="http://www.ibm.com/cn-zh/">IBM</a>
-								<br />
-								<a href="http://www.amd.com/zh-cn">AMD</a>
-								<br />
-								<a href="http://www.qualcomm.cn/">高通</a>
-								<br />
-								<br />
-								<a href="https://www.microsoft.com/zh-cn">微软</a>
-								<br />
-								<a href="https://www.oracle.com/index.html">ORACLE</a>
-								&nbsp;
-								<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html"><span style="font-size:12px;">JDK</span></a>
-								&nbsp;
-								<a href="https://dev.mysql.com/downloads/mysql/"><span style="font-size:12px;">MySQL</span></a>
-								<br />
-                                <a href="http://openjdk.java.net/">OpenJDK</a>
-                                <br />
-								<a href="https://www.dellemc.com/zh-cn/index.htm">EMC</a>
-								<br />
-								<a href="https://www.cisco.com/">CISCO</a>
-								<br />
-								<a href=""></a>
-								<br />
-							</td>
-                            <td valign="top" class="fontSS">
-                                <a href="https://magi.com/">Magi</a>
-								<br />
-                                <a href="https://www.zhihu.com/">知乎</a>
-								<br />
-                                <a href="https://www.douban.com/">豆瓣</a>
-								<br />
-                                <a href="http://www.sina.com.cn/">新浪首页</a>
-                                <br />
-                                <a href="http://i.firefoxchina.cn/">火狐主页</a>
-                                <br />
-							</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="hidden" name="f">
-                    <!--OTHER-->
-                    <br />&nbsp;
-                    <table width="100%">
-                        <tr>
-                            <td width="4%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td valign="top" class="fontSS">
-								<a href="http://www.dell.com.cn/">DELL</a>
-								<br />
-								<a href="https://www8.hp.com/cn/zh/home.html">惠普</a>
-								<br />
-								<a href="http://www.lenovo.com.cn/">联想</a>
-								&nbsp;
-								<a href="https://www.thinkpad.com/"><span style="font-size:12px;">ThinkPad</span></a>
-								<br />
-								<a href="https://w3.asus.com.cn/">华硕</a>
-								&nbsp;
-								<a href="https://www.asus.com.cn/Laptops/Gaming-Series-Products/"><span style="font-size:12px;">ROG玩家国度</span></a>
-								&nbsp;
-								<a href="https://www.asus.com.cn/Laptops/FX-ZX-Series-Products/"><span style="font-size:12px;">飞行堡垒</span></a>
-								<br />
-                                <a href="http://www.hasee.com/chinese/index.aspx">神舟</a>
-                                <br />
-								<a href="http://cn.razerzone.com/gaming-systems">雷蛇</a>
-								<br />
-								<a href="https://cn.msi.com/">微星</a>
-								<br />
-								<a href="http://www.gigabyte.cn/">技嘉</a>
-								<br />
-								<a href="http://www.shinelon.com/">炫龙</a>
-								<br />
-								<a href="http://www.mechrevo.com/">机械革命</a>
-								<br />
-								<a href="http://www.terransforce.com/">未来人类</a>
-								<br />
-								<a href="http://www.machenike.com/">机械师</a>
-								<br />
-                            </td>
-                            <td valign="top" class="fontSS">
-                                <a href="https://www.taobao.com/">淘宝网</a>
-								&nbsp;
-								<a href="https://www.tmall.com/"><span style="font-size:12px;">天猫</span></a>
-                                <br />
-                                <a href="http://www.jd.com">京东&nbsp;JD<span style="font-size:12px;">.com</span></a>
-                                <br />
-                                <a href="http://www.dangdang.com/">当当网</a>
-                                <br />
-                                <a href="https://www.xiaomiyoupin.com/">小米有品</a>
-                                <br />
-                                <a href="http://you.163.com/">网易严选</a>
-                                <br />
-                                <a href="http://www.amazon.cn">亚马逊</a>
-                                &nbsp;
-                                <a href="https://www.amazon.co.jp/"><span style="font-size:12px;">日亚</span></a>
-                                &nbsp;
-                                <a href="http://www.amazon.com/"><span style="font-size:12px;">美亚</span></a>
-                                &nbsp;
-                                <a href="https://www.amazon.co.uk/"><span style="font-size:12px;">英亚</span></a>
-                                <br />
-                                <a href="https://www.vip.com/">唯品会</a>
-                                <br />
-                            </td>
-                            <td valign="top" class="fontSS">
-                                <a href="https://www.apple.com/cn/">Apple</a>
-                                <br />
-                                <a href="http://www.mi.com/">小米</a>
-                                <br />
-                                <a href="http://www.oppo.com/cn/">oppo</a>
-                                &nbsp;
-                                <a href="http://www.vivo.com.cn/">vivo</a>
-                                &nbsp;
-                                <a href="https://www.oneplus.com/cn">一加</a>
-                                <br />
-                                <a href="http://www.huawei.com/cn/">华为</a>
-                                <br />
-                                <a href="https://www.honor.cn/">荣耀</a>
-                                <br />
-								<a href="http://www.samsung.com/cn/">三星</a>
-								<br />
-								<br />
-								<a href=""></a>
-								<br />
-							</td>
-                            <td valign="top" class="fontSS">
-                                <a href="http://www.ccb.com/">中国建设银行</a>
-                                <br />
-                                <a href="http://www.icbc.com.cn/">中国工商银行</a>
-                                <br />
-                                <a href="http://www.boc.cn/">中国银行</a>
-                                <br />
-                                <a href="http://www.cmbchina.com/">招商银行</a>
-                                <br />
-                                <a href="http://ebank.spdb.com.cn/">浦发银行</a>
-                                <br />
-								<a href="http://www.citicbank.com/">中信银行</a>
-								<br />
-								<a href="http://www.12306.cn/">12306</a>
-								<br />
-								<br />
-								<br />
-								<a href="https://www.huobi.be/zh-cn/">火币</a>
-								<br />
-								<a href="http://www.antgroup.com/">蚂蚁金服</a>
-								<br />
-								<a href="http://licai.jd.com/">京东金融</a>
-								<br />
-<!--								<a href="https://www.nicaifu.com/">你财富</a>-->
-<!--								<br />-->
-<!--								<a href="https://www.qianyilc.com/">千壹理财</a>-->
-<!--								<br />-->
-<!--								<a href="http://www.wacai.com/">挖财</a>-->
-								<br />
-							</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="hidden" name="f" style="display:none;">
-                    <!--SHOPPING-->
-                    <br />&nbsp;
-                    <table width="100%">
-                        <tr>
-                            <td width="4%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                            <td width="24%"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td valign="top" class="fontSS"></td>
-                            <td valign="top" class="fontSS"></td>
-                            <td valign="top" class="fontSS"></td>
-                            <td valign="top" class="fontSS"></td>
-                        </tr>
-                    </table>
-                </div>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://www.bilibili.com/">bilibili</a>
+                            <br/>
+                            <a href="http://www.iqiyi.com/">爱奇艺</a>
+                            <br/>
+                            <a href="http://www.youku.com/">优酷</a>
+                            <br/>
+                            <a href="https://v.qq.com/">腾讯视频</a>
+                            <br/>
+                            <a href="http://www.acfun.cn/">AcFun</a>
+                            <br/>
+                            <a href="http://maoyan.com/">猫眼</a>
+                            <br/>
+                            <a href="http://tv.sohu.com/">搜狐视频</a>
+                            <br/>
+                            <a href="http://www.le.com/">乐视</a>
+                            <br/>
+                            <a href="http://www.1905.com/">1905</a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://www.zimuku.net/" target="_blank">字幕库</a>
+                            <br/>
+                            <a href="https://subhd.tv/" target="_blank">Sub HD 字幕站</a>
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hidden" name="f">
+                <!--TOOLS-->
+                <br/>&nbsp;
+                <table width="100%">
+                    <tr>
+                        <td width="4%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://note.youdao.com/">有道云笔记</a>
+                            <br/>
+                            <a href="https://docs.qq.com/desktop/?tdsourcetag=s_browser_shortcut">腾讯文档</a>
+                            <br/>
+                            <a href="https://naotu.baidu.com/home">百度脑图</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://pan.baidu.com/">百度网盘</a>
+                            <br/>
+                            <a href="https://gitmind.cn/">GitMind</a>
+                            <br/>
+                            <a href="https://www.edrawmax.cn/online/">亿图图示</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://mm.edrawsoft.cn/files">mindmaster</a>
+                            <br/>
+                            <a href="http://music.163.com/">网易云音乐</a>
+                            &nbsp;
+                            <a href="http://email.163.com/">网易邮箱</a>
+                            <br/>
+                            <a href="https://www.sui.com/report_index.do">随手记</a>
+                            <br/>
+                            <!--a href="http://www.firearmsworld.net">枪炮世界</a-->
+                            <a href="http://pewpewpew.work/">枪炮世界</a>
+                            <br/>
+                            <a href="http://msdn.itellyou.cn/">I Tell You</a>
+                            &nbsp;
+                            <a href="https://next.itellyou.cn/"><span style="font-size:12px;">新版</span></a>
+                            <br/>
+                            <a href="http://www.zdfans.com/">软件</a>
+                            <br/>
+                            <a href="https://www.dida365.com/">滴答清单</a>
+                            <br/>
+                            <a href="http://pan.stnts.com/">盛天云盘</a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://fanyi.youdao.com/">有道翻译</a>
+                            &nbsp;
+                            <a href="http://dict.youdao.com/"><span style="font-size:12px;">词典</span></a>
+                            <br/>
+                            <a href="http://fanyi.baidu.com/">百度翻译</a>
+                            <br/>
+                            <a href="http://map.baidu.com/">百度地图</a>
+                            <br/>
+                            <!--a href="http://ditu.google.cn/maps?hl=zh-CN&tab=wl">Google地图</a-->
+                            <a href="https://www.google.com/maps">Google地图</a>
+                            <br/>
+                            <a href="http://wx.qq.com">微信网页版</a>
+                            <br/>
+                            <a href="http://www.converticon.com/">PNG To ICON</a>
+                            <br/>
+                            <a href="http://www.iconarchive.com/">icon</a>
+                            <br/>
+                            <a href="http://www.flvcd.com/">硕鼠</a>
+                            <br/>
+                            <a href="http://61.185.242.108/uhtbin/webcat">陕西省图检索</a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://www.intel.cn/">intel</a>
+                            <br/>
+                            <a href="http://www.nvidia.cn/">NVIDIA</a>
+                            <br/>
+                            <a href="http://www.ibm.com/cn-zh/">IBM</a>
+                            <br/>
+                            <a href="http://www.amd.com/zh-cn">AMD</a>
+                            <br/>
+                            <a href="http://www.qualcomm.cn/">高通</a>
+                            <br/>
+                            <br/>
+                            <a href="https://www.microsoft.com/zh-cn">微软</a>
+                            <br/>
+                            <a href="https://www.oracle.com/index.html">ORACLE</a>
+                            &nbsp;
+                            <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html"><span
+                                    style="font-size:12px;">JDK</span></a>
+                            &nbsp;
+                            <a href="https://dev.mysql.com/downloads/mysql/"><span style="font-size:12px;">MySQL</span></a>
+                            <br/>
+                            <a href="http://openjdk.java.net/">OpenJDK</a>
+                            <br/>
+                            <a href="https://www.dellemc.com/zh-cn/index.htm">EMC</a>
+                            <br/>
+                            <a href="https://www.cisco.com/">CISCO</a>
+                            <br/>
+                            <a href=""></a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="https://magi.com/">Magi</a>
+                            <br/>
+                            <a href="https://www.zhihu.com/">知乎</a>
+                            <br/>
+                            <a href="https://www.douban.com/">豆瓣</a>
+                            <br/>
+                            <a href="http://www.sina.com.cn/">新浪首页</a>
+                            <br/>
+                            <a href="http://i.firefoxchina.cn/">火狐主页</a>
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hidden" name="f">
+                <!--OTHER-->
+                <br/>&nbsp;
+                <table width="100%">
+                    <tr>
+                        <td width="4%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://www.dell.com.cn/">DELL</a>
+                            <br/>
+                            <a href="https://www8.hp.com/cn/zh/home.html">惠普</a>
+                            <br/>
+                            <a href="http://www.lenovo.com.cn/">联想</a>
+                            &nbsp;
+                            <a href="https://www.thinkpad.com/"><span style="font-size:12px;">ThinkPad</span></a>
+                            <br/>
+                            <a href="https://w3.asus.com.cn/">华硕</a>
+                            &nbsp;
+                            <a href="https://www.asus.com.cn/Laptops/Gaming-Series-Products/"><span
+                                    style="font-size:12px;">ROG玩家国度</span></a>
+                            &nbsp;
+                            <a href="https://www.asus.com.cn/Laptops/FX-ZX-Series-Products/"><span
+                                    style="font-size:12px;">飞行堡垒</span></a>
+                            <br/>
+                            <a href="http://www.hasee.com/chinese/index.aspx">神舟</a>
+                            <br/>
+                            <a href="http://cn.razerzone.com/gaming-systems">雷蛇</a>
+                            <br/>
+                            <a href="https://cn.msi.com/">微星</a>
+                            <br/>
+                            <a href="http://www.gigabyte.cn/">技嘉</a>
+                            <br/>
+                            <a href="http://www.shinelon.com/">炫龙</a>
+                            <br/>
+                            <a href="http://www.mechrevo.com/">机械革命</a>
+                            <br/>
+                            <a href="http://www.terransforce.com/">未来人类</a>
+                            <br/>
+                            <a href="http://www.machenike.com/">机械师</a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="https://www.taobao.com/">淘宝网</a>
+                            &nbsp;
+                            <a href="https://www.tmall.com/"><span style="font-size:12px;">天猫</span></a>
+                            <br/>
+                            <a href="http://www.jd.com">京东&nbsp;JD<span style="font-size:12px;">.com</span></a>
+                            <br/>
+                            <a href="http://www.dangdang.com/">当当网</a>
+                            <br/>
+                            <a href="https://www.xiaomiyoupin.com/">小米有品</a>
+                            <br/>
+                            <a href="http://you.163.com/">网易严选</a>
+                            <br/>
+                            <a href="http://www.amazon.cn">亚马逊</a>
+                            &nbsp;
+                            <a href="https://www.amazon.co.jp/"><span style="font-size:12px;">日亚</span></a>
+                            &nbsp;
+                            <a href="http://www.amazon.com/"><span style="font-size:12px;">美亚</span></a>
+                            &nbsp;
+                            <a href="https://www.amazon.co.uk/"><span style="font-size:12px;">英亚</span></a>
+                            <br/>
+                            <a href="https://www.vip.com/">唯品会</a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="https://www.apple.com/cn/">Apple</a>
+                            <br/>
+                            <a href="http://www.mi.com/">小米</a>
+                            <br/>
+                            <a href="http://www.oppo.com/cn/">oppo</a>
+                            &nbsp;
+                            <a href="http://www.vivo.com.cn/">vivo</a>
+                            &nbsp;
+                            <a href="https://www.oneplus.com/cn">一加</a>
+                            <br/>
+                            <a href="http://www.huawei.com/cn/">华为</a>
+                            <br/>
+                            <a href="https://www.honor.cn/">荣耀</a>
+                            <br/>
+                            <a href="http://www.samsung.com/cn/">三星</a>
+                            <br/>
+                            <br/>
+                            <a href=""></a>
+                            <br/>
+                        </td>
+                        <td valign="top" class="fontSS">
+                            <a href="http://www.ccb.com/">中国建设银行</a>
+                            <br/>
+                            <a href="http://www.icbc.com.cn/">中国工商银行</a>
+                            <br/>
+                            <a href="http://www.boc.cn/">中国银行</a>
+                            <br/>
+                            <a href="http://www.cmbchina.com/">招商银行</a>
+                            <br/>
+                            <a href="http://ebank.spdb.com.cn/">浦发银行</a>
+                            <br/>
+                            <a href="http://www.citicbank.com/">中信银行</a>
+                            <br/>
+                            <a href="http://www.12306.cn/">12306</a>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <a href="https://www.huobi.be/zh-cn/">火币</a>
+                            <br/>
+                            <a href="http://www.antgroup.com/">蚂蚁金服</a>
+                            <br/>
+                            <a href="http://licai.jd.com/">京东金融</a>
+                            <br/>
+                            <!--								<a href="https://www.nicaifu.com/">你财富</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="https://www.qianyilc.com/">千壹理财</a>-->
+                            <!--								<br />-->
+                            <!--								<a href="http://www.wacai.com/">挖财</a>-->
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hidden" name="f" style="display:none;">
+                <!--SHOPPING-->
+                <br/>&nbsp;
+                <table width="100%">
+                    <tr>
+                        <td width="4%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                        <td width="24%"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td valign="top" class="fontSS"></td>
+                        <td valign="top" class="fontSS"></td>
+                        <td valign="top" class="fontSS"></td>
+                        <td valign="top" class="fontSS"></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
-	<div style="width:100%;height:30px;" align="right">
-		<span id="ver" style="font-size:12px;"></span>
-	</div>
+</div>
+<div style="width:100%;height:30px;" align="right">
+    <span id="ver" style="font-size:12px;"></span>
+</div>
 </body>
 </html>
