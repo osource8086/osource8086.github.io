@@ -398,7 +398,7 @@
         $("#youku").click(function () {
             $("#input_search").attr("name", "");
             $("#form_main").attr("action", "https://so.youku.com/search_video/q_" + $("#input_search").val());
-            if(searchValIsNull()){
+            if (searchValIsNull()) {
                 $("#form_main").attr("action", "https://youku.com");
             }
             $("#form_main").submit();
@@ -407,7 +407,7 @@
     });
 
     $(function () {
-        var version = "22.1.2";
+        var version = "22.1.3";
         $("#ver").text("OSOURCE Version " + version);
         $("#ver").click(function () {
             alert("网页仅供私人使用，未经开发者本人同意，严禁传播。\n网页版权归osource所有。");
@@ -575,8 +575,8 @@
                             <span style="color:#4B4C50;"><b>Mirrors</b></span>
                             <br/>
                             <br/>
-                            <!--								<a href="https://opsx.alibaba.com/">阿里巴巴开源镜像站</a>-->
-                            <!--								<br />-->
+                            <!--<a href="https://opsx.alibaba.com/">阿里巴巴开源镜像站</a>-->
+                            <!--<br />-->
                             <a href="https://mirrors.huaweicloud.com/">华为开源镜像站</a>
                             <br/>
                             <a href="http://mirrors.163.com/">网易开源镜像站</a>
@@ -607,8 +607,8 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td valign="top" class="fontSS">
-                            <!--                                <a href="http://www.w3school.com.cn/index.html">W3School</a>-->
-                            <!--                                <br />-->
+                            <!--<a href="http://www.w3school.com.cn/index.html">W3School</a>-->
+                            <!--<br />-->
                             <a href="http://www.runoob.com/">RUNOOB</a>
                             <br/>
                             <a href="http://www.bjpowernode.com/tutorial/">动力节点</a>
@@ -621,7 +621,7 @@
                             <br/>
                             <a href="https://doc.ruoyi.vip/">若依文档</a>
                             <br/>
-                            <!--                                <a href="http://www.java1234.com/easyui.html">EasyUI中文示例文档</a>-->
+                            <!--<a href="http://www.java1234.com/easyui.html">EasyUI中文示例文档</a>-->
                             <a href="http://www.csdn.net/">CSDN</a>
                             <br/>
                             <a href="http://www.oschina.net">开源中国社区</a>
@@ -630,10 +630,9 @@
                             <br/>
                             <a href="https://developer.android.google.cn/guide">Android Developers</a>
                             <br/>
-                            <a href="http://msdn.microsoft.com/zh-cn">Microsoft Developer Network</a>
+<!--                            <a href="http://msdn.microsoft.com/zh-cn">Microsoft Developer Network</a>-->
                             <br/>
-                            <!--                                <a href="https://www.shiyanlou.com/">实验楼</a>-->
-                            <br/>
+                            <!--<a href="https://www.shiyanlou.com/">实验楼</a>-->
                             <br/>
                             <a href="http://www.bejson.com">在线Json校验</a>
                             <br/>
@@ -716,8 +715,12 @@
                             <br/>
                             <br/>
                             <a href="https://repo.spring.io/release/org/springframework/spring/">Spring Framework</a>
+                            &nbsp;&nbsp;
+                            <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/">Spring API Doc.</a>
                             <br/>
                             <a href="https://start.spring.io/">SpringInitializr</a>
+                            &nbsp;&nbsp;
+                            <a href="https://docs.spring.io/spring-boot/docs/current/api/">Spring Boot API Doc.</a>
                             <br/>
                             <a href="https://www.oracle.com/cn/java/technologies/java-se-api-doc.html">API</a>
                             &nbsp;&nbsp;
@@ -762,8 +765,8 @@
                         <td>&nbsp;</td>
                         <td valign="top" class="fontSS">
 
-                            <!--							    <a href="http://www.mp4ba.cc/" target="_black" rel="noopener noreferrer">MP4吧</a>-->
-                            <!--								<br />-->
+                            <!--<a href="http://www.mp4ba.cc/" target="_black" rel="noopener noreferrer">MP4吧</a>-->
+                            <!--<br />-->
                             <a href="https://www.dytt8.net/index2.htm" rel="noopener noreferrer"
                                target="_blank">电影天堂</a>
                             &nbsp;
@@ -779,8 +782,8 @@
                             <br/>
                             <a href="https://www.xl720.com/" target="_blank" rel="noopener noreferrer">迅雷电影</a>
                             <br/>
-                            <!--                                <a href="http://www.xiepp.com/" target="_blank" rel="noopener noreferrer">下片片</a>-->
-                            <!--                                <br />-->
+                            <!--<a href="http://www.xiepp.com/" target="_blank" rel="noopener noreferrer">下片片</a>-->
+                            <!--<br />-->
                             <a href="http://www.loldytt2088.com/" rel="noopener noreferrer" target="_blank">LOL电影</a>
                             <br/>
                             <a href="http://www.hao6v.tv/" rel="noopener noreferrer" target="_blank">6v电影网</a>
@@ -789,51 +792,51 @@
                             <br/>
                             <a href="http://www.xunleidytt.com/" rel="noopener noreferrer" target="_blank">迅雷电影天堂</a>
                             <br/>
-                            <!--								<a href="https://www.btba.cc/" target="_blank" rel="noopener noreferrer">BT吧</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.bttt.la/" target="_blank" rel="noopener noreferrer">BT天堂</a>-->
-                            <!--								<a href="http://www.22tu.cc/" target="_blank" rel="noopener noreferrer">迅播影院</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.rarbt.com/" target="_blank" rel="noopener noreferrer">RARBT中文站</a>-->
-                            <!--								<br />-->
-                            <!--                                <a href="http://www.kaixindy.com/" target="_blank" rel="noopener noreferrer">海阔天空</a>-->
-                            <!--                                <br />-->
-                            <!--                                <a href="http://www.gaoqingkong.com/" target="_blank" rel="noopener noreferrer">高清控联盟</a>-->
-                            <!--                                <br />-->
-                            <!--                                <a href="http://blu-raydisc.tv/" target="_blank" rel="noopener noreferrer">蓝光电影</a>-->
-                            <!--                                <br />-->
+                            <!--<a href="https://www.btba.cc/" target="_blank" rel="noopener noreferrer">BT吧</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.bttt.la/" target="_blank" rel="noopener noreferrer">BT天堂</a>-->
+                            <!--<a href="http://www.22tu.cc/" target="_blank" rel="noopener noreferrer">迅播影院</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.rarbt.com/" target="_blank" rel="noopener noreferrer">RARBT中文站</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.kaixindy.com/" target="_blank" rel="noopener noreferrer">海阔天空</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.gaoqingkong.com/" target="_blank" rel="noopener noreferrer">高清控联盟</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://blu-raydisc.tv/" target="_blank" rel="noopener noreferrer">蓝光电影</a>-->
+                            <!--<br />-->
                         </td>
                         <td valign="top" class="fontSS">
                             <a href="https://www.meijutt.tv/" target="_blank">美剧天堂</a>
                             <br/>
-                            <!--								<a href="http://www.bt606.com/forum.php" target="_blank">BT乐园</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.lbldy.com/" target="_blank">龙部落</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.mxroom.com/" target="_blank">百度云资源论坛</a>-->
-                            <!--								<br />-->
+                            <!--<a href="http://www.bt606.com/forum.php" target="_blank">BT乐园</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.lbldy.com/" target="_blank">龙部落</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.mxroom.com/" target="_blank">百度云资源论坛</a>-->
+                            <!--<br />-->
                             <a href="http://www.dygang.com/" target="_blank">电影港</a>
                             <br/>
-                            <!--								<a href="http://www.2011mv.com/" target="_blank">夕阳小站</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://2kandy.com/" target="_blank">爱看电影网</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.1080pdy.com/" target="_blank">1080P电影网</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.iplaykan.com/" target="_black">我看看</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.piaohua.tv/" target="_black">飘花电影</a>-->
-                            <!--								<br />-->
+                            <!--<a href="http://www.2011mv.com/" target="_blank">夕阳小站</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://2kandy.com/" target="_blank">爱看电影网</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.1080pdy.com/" target="_blank">1080P电影网</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.iplaykan.com/" target="_black">我看看</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.piaohua.tv/" target="_black">飘花电影</a>-->
+                            <!--<br />-->
                             <a href="http://www.ygdy8.com" target="_blank">阳光电影</a>
                             <br/>
                             <a href="https://www.4kvm.com/" target="_blank">4k影视</a>
                             <br/>
-                            <!--								<a href="http://www.mp4pa.com/" target="_blank">MP4pa</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.mp4ba.net/" target="_blank">高清MP4</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.99tvs.com/" target="_blank">高清MP4吧</a>-->
-                            <!--								<br />-->
+                            <!--<a href="http://www.mp4pa.com/" target="_blank">MP4pa</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.mp4ba.net/" target="_blank">高清MP4</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.99tvs.com/" target="_blank">高清MP4吧</a>-->
+                            <!--<br />-->
 
                         </td>
                         <td valign="top" class="fontSS">
@@ -1096,11 +1099,11 @@
                             <br/>
                             <a href="http://licai.jd.com/">京东金融</a>
                             <br/>
-                            <!--								<a href="https://www.nicaifu.com/">你财富</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="https://www.qianyilc.com/">千壹理财</a>-->
-                            <!--								<br />-->
-                            <!--								<a href="http://www.wacai.com/">挖财</a>-->
+                            <!--<a href="https://www.nicaifu.com/">你财富</a>-->
+                            <!--<br />-->
+                            <!--<a href="https://www.qianyilc.com/">千壹理财</a>-->
+                            <!--<br />-->
+                            <!--<a href="http://www.wacai.com/">挖财</a>-->
                             <br/>
                         </td>
                     </tr>
