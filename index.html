@@ -404,10 +404,21 @@
             $("#form_main").submit();
         });
 
+        $("#kaifa").click(function () {
+            $("#input_search").attr("name", "wd");
+            $("#input_encode").attr("name", "module");
+            $("#input_encode").attr("value", "SUG");
+            $("#form_main").attr("action", "https://kaifa.baidu.com/searchPage");
+            if (searchValIsNull()) {
+                $("#form_main").attr("action", "https://kaifa.baidu.com/");
+            }
+            $("#form_main").submit();
+        });
+
     });
 
     $(function () {
-        var version = "22.8.2";
+        var version = "22.9.1";
         $("#ver").text("OSOURCE Version " + version);
         $("#ver").click(function () {
             alert("网页仅供私人使用，未经开发者本人同意，严禁传播。\n网页版权归osource所有。");
@@ -459,6 +470,8 @@
                             <a id="iqiyi" class="fontSearch" style="cursor:pointer;color:#00BE06">爱奇艺</a>
                             &nbsp;&nbsp;
                             <a id="youku" class="fontSearch" style="cursor:pointer;color:#24A5FF">优酷</a>
+                            &nbsp;&nbsp;
+                            <a id="kaifa" class="fontSearch" style="cursor:pointer;color:#333333">开发者搜索</a>
                             &nbsp;&nbsp;
 
                         </td>
